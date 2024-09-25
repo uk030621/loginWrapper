@@ -62,7 +62,7 @@ export default function RegisterForm() {
   };
 
   return (
-    <div className="grid place-items-center h-screen">
+    <div className="flex justify-center items-start h-screen px-4 mt-10"> {/* Adjust margin and vertical alignment */}
       <div className="shadow-lg p-5 rounded-lg border-t-4 border-green-400">
         <h1 className="text-xl font-bold my-4">Register</h1>
 
