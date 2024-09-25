@@ -37,7 +37,7 @@ export default function LoginForm() {
   return (
     <div className="flex justify-center items-start h-screen px-4 mt-10"> {/* Adjust margin and vertical alignment */}
       <div className="shadow-lg p-5 rounded-lg border-t-4 border-green-400 bg-white w-full max-w-md">
-        <h1 className="text-xl md:text-2xl font-bold my-4 text-center">Login</h1>
+        <h1 className="text-xl font-bold my-4">Login</h1>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
