@@ -1,3 +1,5 @@
+// app/api/auth/[...nextauth]/route.js
+
 import { connectMongoDB } from "@/lib/mongodb";
 import User from "@/models/user";
 import NextAuth from "next-auth/next";
@@ -9,7 +11,6 @@ export const authOptions = {
     CredentialsProvider({
       name: "credentials",
       credentials: {},
-
       async authorize(credentials) {
         const { email, password } = credentials;
 
@@ -29,7 +30,8 @@ export const authOptions = {
 
           return user;
         } catch (error) {
-          console.log("Error: ", error);
+          console.error("Error in authorize:", error);
+          return null;
         }
       },
     }),

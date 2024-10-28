@@ -1,6 +1,7 @@
-import UserInfo from "@/components/UserInfo";
+import Hello from "@/components/Hello";
+
+//import UserInfo from "@/components/Hello";
 
 export default function Dashboard() {
-  return <UserInfo />;
+  return <Hello />;
 }
- 
