@@ -77,15 +77,15 @@ export default function UserData() {
       </p>
 
       {/* Button Group */}
-      <div className="flex flex-col md:flex-row mb-4 gap-4">
+      <div className="flex md:flex-row mb-4 gap-4">
         <button
-          className="bg-green-700 text-white rounded-md py-2 px-4 w-full md:w-auto"
+          className="bg-green-700 text-white rounded-md py-2 px-4 w-fit md:w-auto"
           onClick={editingId ? updateData : createData}
         >
           {editingId ? "Save Changes" : "Create"}
         </button>
         <Link
-          className="text-white bg-black rounded-md py-2 px-4 w-full md:w-auto text-center"
+          className="text-white bg-black rounded-md py-2 px-4 w-fit md:w-auto text-center"
           href="/dashboard"
         >
           ⬅️ Back
@@ -123,7 +123,7 @@ export default function UserData() {
             </p>
 
             {/* Button Group for Edit and Delete */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex sm:flex-row gap-4">
               {/*<button
                 className="bg-yellow-600 text-white rounded-md py-1 px-4 w-full sm:w-auto"
                 onClick={() => handleEdit(item)}
@@ -131,18 +131,18 @@ export default function UserData() {
                 Edit
               </button>*/}
               <button
-                className="text-black rounded-md mr-5"
+                className="text-black rounded-md w-5 mr-8 flex"
                 onClick={() => handleEdit(item)}
                 style={{ padding: "2px 2px" }}
               >
-                ✏️
+                ✏️<span className="text-xs">edit</span>
               </button>
               <button
-                className="text-red-500 rounded-md mr-10"
+                className="text-red-500 rounded-md w-5 flex"
                 onClick={() => deleteData(item._id)}
                 style={{ padding: "2px 2px" }}
               >
-                🗑️
+                🗑️<span className="text-xs">delete</span>
               </button>
               {/*<button
                 className="bg-red-600 text-white rounded-md py-1 px-4 w-full sm:w-auto"
