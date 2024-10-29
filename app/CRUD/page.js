@@ -88,7 +88,7 @@ export default function UserData() {
           className="text-white bg-black rounded-md py-2 px-4 w-full md:w-auto text-center"
           href="/dashboard"
         >
-          Log out
+          ⬅️ Back
         </Link>
       </div>
 
@@ -124,18 +124,32 @@ export default function UserData() {
 
             {/* Button Group for Edit and Delete */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button
+              {/*<button
                 className="bg-yellow-600 text-white rounded-md py-1 px-4 w-full sm:w-auto"
                 onClick={() => handleEdit(item)}
               >
                 Edit
+              </button>*/}
+              <button
+                className="text-black rounded-md mr-5"
+                onClick={() => handleEdit(item)}
+                style={{ padding: "2px 2px" }}
+              >
+                ✏️
               </button>
               <button
+                className="text-red-500 rounded-md mr-10"
+                onClick={() => deleteData(item._id)}
+                style={{ padding: "2px 2px" }}
+              >
+                🗑️
+              </button>
+              {/*<button
                 className="bg-red-600 text-white rounded-md py-1 px-4 w-full sm:w-auto"
                 onClick={() => deleteData(item._id)}
               >
                 Delete
-              </button>
+              </button>*/}
             </div>
           </li>
         ))}
