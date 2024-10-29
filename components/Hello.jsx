@@ -12,7 +12,7 @@ export default function Hello() {
     <div className="flex justify-center items-start h-screen px-4 mt-10">
       <div className="shadow-lg p-8 bg-zince-300/10 flex flex-col gap-2 my-6">
         <h1 className="text-slate-700 font-bold text-2xl">
-          Welcome {session?.user?.name?.split(" ")[0]},
+          Hi {session?.user?.name?.split(" ")[0]},
         </h1>
         <div className="text-sm">
           Full Name: <span className="font-bold">{session?.user?.name}</span>
@@ -22,15 +22,17 @@ export default function Hello() {
           <span className="font-bold">{session?.user?.email}</span>
         </div>
         <div>
-          <p className="text-green-700 text-lg mb-5">Access Permitted 👍</p>
+          <p className="text-green-700 text-base mb-5 mt-4">
+            <span className="text-slate-400">Access Status: </span>logged-in 👍
+          </p>
           <p>
-            Click <Link href="/CRUD">➡️</Link> to continue. <br />
+            Click <Link href="/CRUD">➡️</Link> to resume... <br />
             <span className=" text-slate-400 mt-3">or</span>
           </p>
         </div>
         <button
           onClick={() => signOut()}
-          className="bg-red-500 text-white w-full text-sm py-2 px-4 rounded-md text-center"
+          className="bg-red-500 text-white w-fit text-sm py-2 px-4 rounded-md text-center"
         >
           Log Out
         </button>

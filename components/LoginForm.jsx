@@ -28,14 +28,16 @@ export default function LoginForm() {
         return;
       }
 
-      router.replace("dashboard");
+      router.replace("CRUD");
     } catch (error) {
       console.log(error);
     }
   };
 
   return (
-    <div className="flex justify-center items-start h-screen px-4 mt-10"> {/* Adjust margin and vertical alignment */}
+    <div className="flex justify-center items-start h-screen px-4 mt-10">
+      {" "}
+      {/* Adjust margin and vertical alignment */}
       <div className="shadow-lg p-5 rounded-lg border-t-4 border-green-400 bg-white w-full max-w-md">
         <h1 className="text-xl font-bold my-4">Login</h1>
 
@@ -61,7 +63,10 @@ export default function LoginForm() {
             </div>
           )}
 
-          <Link className="text-sm mt-3 text-right text-gray-500 hover:underline" href={"/register"}>
+          <Link
+            className="text-sm mt-3 text-right text-gray-500 hover:underline"
+            href={"/register"}
+          >
             Do not have an account? <span className="underline">Register</span>
           </Link>
         </form>
